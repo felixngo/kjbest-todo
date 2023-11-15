@@ -13,8 +13,6 @@ services:
       - MYSQL_DB=todo
     ports:
       - "3000:3000"
-    networks:
-      - todo-network
     restart: on-failure
     depends_on:
       - todo-database
@@ -31,9 +29,4 @@ services:
       MYSQL_PASSWORD: password
     ports:
       - "3306:3000"
-    networks:
-      - todo-network
-
-networks:
-  todo-network:
 
